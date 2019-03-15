@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--
+    Name: Daniel Clarke
+    Date Created: 03/14/2019
+    Most recent revision: 03/14/2019
+
+    Sample website developed for a resturant using different styles and techniques
+    to display basic functions of bootstrapping, css, and general javaScript and
+    html utilization. (Best viewed in Safari and Google Chrome)
+
+    Requirements are built upon three exercises with set rules. However, only the
+    requirments presrented in the third exercise will be highlited within the code.
+
+    * add bootstrap (1) located *home.html line 25-29
+    * style navigation (tabe or pill) (2) *located home,menu and contact.html (Nav section)
+    * make site responsive ~(3) main bootstrap used is container for this website
+    * make home button a house icon (4) located home.html line 124
+    * use jumbotron/header to display "opening new location" (5) *located in home.html line 114
+    * add carousel to display three messages (6) *located in menu.html 262
+    * Use bootstrap form to display error message that information is valid without submitting located contact.html line 147~170 *script in contact.html
+    * make users with Javascript disable know site is best viewed with javascript enable (8) located in menu,contact,home.html below footer
+
+-->
+<html lang="en">
+    <head>
+      <meta charset="utf-8"> <!-- links  used to set up bootstrap via CDN-->
+      <meta name="viewport" content="width=device-width, initial-scal=1, shrink-to-fi=no">
+          <title> Menu </title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <!-- main source for internal styling of website menu page-->
+        <style>
+          div{
+            background-color: #fedcd2;
+            color: #df744a;
+            margin-top: 10px;
+          }
+
+          body{
+              max-width: 900px;
+              margin: 0 auto;
+            }
+            th{
+              text-align: center;
+              font-size: 1.2em;
+            }
+
+            td{
+              padding: 4px;
+              text-align: center;
+            }
+
+            nav{
+              background-color: #8fd8d2;
+              border-bottom: thin solid black;
+            }
+            nav a{
+
+                margin-bottom: 10px;
+                margin-top: 10px;
+                margin-left: 5px;
+                padding: 8px;
+                border: thin solid #0d1f2d;
+                text-decoration: none;
+                display: block;
+                width: 100px;
+                float:left;
+
+            }
+            .btn{
+              background-color: #5b7d87;
+              color: #dcb239;
+              margin-right: 10px;
+              text-decoration: none;
+              text-align: center;
+              display: block;
+              padding-right: 20px;
+              float:left;
+            }
+
+            .btn:hover{
+              font-weight: bold;
+            }
+
+            .btn:visited{
+              color: #df744a;
+            }
+
+            .btn:link{
+              text-decoration: none;
+            }
+
+            i:hover{
+              color: gold;
+              ;
+            }
+
+            .clear-float{
+              clear:both;
+            }
+
+
+            .clear-float{
+              clear:both;
+            }
+
+            table.drinks{
+              background-color: blue;
+            }
+
+            #table2, #h2{
+              margin-top: 5px;
+              width: 100%;
+              background-color: white;
+              border: 1px solid black;
+            }
+            #d2{
+              width: 50%;
+              text-align: justify;
+            }
+            #h2{
+              text-align: justify;
+              background-color: #fedcd2;
+            }
+
+            #odd {
+              background-color: #df744a;
+              color: #cfffe5;
+              }
+
+            #even {
+              background-color: #fedcd2;
+              color: #233237;
+              }
+
+              .carousel-item {
+                text-align: center;
+                width: 100%;
+
+              }
+
+
+        </style>
+
+        <link rel="stylesheet" href="Styles/restaurantStyles.css">
+    </head>
+
+    <body>
+        <header>
+            <h1> Macnificent </h1>
+        </header>
+        <!-- bootstrap used to turn buttons into pill form -->
+        <nav>
+          <div class="clear-float"></div>
+          <p> <a class="btn badge-pill" href="home.html"> <i class="fas fa-home"></i> </a></p>
+          <p><a class="btn badge-pill" href="menu.html">Menu</a></p>
+          <p><a class="btn badge-pill" href="contact.html">Contact Us</a></p>
+          <div class="clear-float"></div>
+        </nav>
+
+
+        <div class="container">
+
+        <div>
+          <table>
+
+            <thead>
+            <tr>
+              <th> Macnificent Assortment  </th>
+              <th> Tropical Paradise </th>
+              <th> The Romantic </th>
+            </tr>
+          </thead>
+
+            <tbody>
+            <tr>
+              <td> Choose all of the flavors your love to eat!
+                   12 pieces start at $24.99 and 24 pieces starting at $49.99
+              </td>
+              <td>  Try the taste of the islands with fruity flavors from around the world.
+                    12 pieces start at $22.99 and 24 pieces starting at $47.99
+              </td>
+              <td> Show your love ones how much they mean with our assortment of chocolates.
+                    12 pieces start at $24.99 and 24 pieces starting at $49.99
+               </td>
+             </tr>
+           </tbody>
+
+             <thead>
+             <tr>
+               <th> Wedding Day </th>
+               <th> Other Pastries</th>
+               <th> I Heart Sweets </th>
+             </tr>
+            </thead>
+
+
+            <tbody>
+             <tr>
+              <td> Add elegance to any wedding venue with an Macnificent tower.
+                    With towers starting a little as $285!
+              </td>
+              <td>
+                   Try our rich and flakey French pastries,
+                    Enclaire, Choux, Beignet all starting under $1.15 a piece!
+              </td>
+              <td>
+                  More sweets to satisfy your sweet tooth?
+                    Try our freshly baked cookies and muffins 2 for  $1.
+              </td>
+            </tr>
+          </tbody>
+
+          </table>
+
+        </div>
+
+
+      </div>
+
+      <table id="table2">
+
+        <tr>
+          <th id="h2" colspan = "2"> Refreshments </th>
+        </tr>
+
+        <tbody id="body2">
+
+            <tr id="odd">
+              <td id="d2">Tea</td>
+              <td id="d2">$2.49</td>
+            </tr>
+
+
+            <tr id="even">
+              <td id="d2">Coffee</td>
+              <td id="d2">$3.99</td>
+            </tr>
+
+
+            <tr id="odd">
+              <td id="d2">Espresso</td>
+              <td id="d2">$3.99</td>
+            </tr>
+
+
+            <tr id="even">
+              <td id="d2">Frappuccino</td>
+              <td id="d2">$4.99</td>
+            </tr>
+
+
+            <tr id="odd">
+              <td id="d2">Bottled Water</td>
+              <td id="d2">$1.99</td>
+            </tr>
+
+      </tbody>
+
+      </table>
+      <!-- carousel used to show customers new location,seasonal menu,special brew -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            We're opening a new location!<br>
+            <img src="Images/mac4.jpg" alt="picture of macarons">
+          </div>
+          <div class="carousel-item">
+            We're rolling out our seasonal menu, with special options for this season.<br>
+            <img src="Images/mac3.jpg" alt="picture of macarons">
+          </div>
+          <div class="carousel-item">
+            The Drink of the Month is SG Special Brew.<br>
+            <img src="Images/mac2.jpg" alt="picture of macarons">
+          </div>
+        </div>
+      </div>
+
+
+        <hr>
+        <footer>
+          <p>
+            0627 Poho Blvd, Honolulu, HI 96779
+          </p>
+          <p>
+            TEL (808)-555-0627
+          </p>
+        </footer>
+        <!-- if javascript is disable prompts user about viewing experience  -->
+        <noscript>JavaScript is off. Please enable to view full site.</noscript>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    </body>
+</html

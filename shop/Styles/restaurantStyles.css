@@ -1,0 +1,25 @@
+/*
+    Name: Daniel Clarke
+    Date Created: 03/14/2019
+    Most recent revision: 03/14/2019
+
+    external sheet used to for prior assignment requirments
+
+*/
+header, footer{
+  text-align: center;
+  background-color: #8fd8d2;
+}
+header{
+  margin-top: 20px;
+  font-family: 'Snell Roundhand';
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+footer{
+  border-bottom: thin solid black;
+  padding-top: 10px;
+  margin-top: 20px;
+
+}

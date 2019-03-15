@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+Name: Daniel Clarke
+Date Created: 03/09/2019
+Most recent revision: 03/09/2019
+
+
+Luck Sevens is a game which allows users to test their luck.
+Game layout
+  * users enters bet
+  * game checks for errors if be is less than 0, NaN, or null
+  * once play is clicked, game a pair of dice until money is completed
+  * if the two die add up to seven, users bet increases by 4, else decreases by 1
+  * once all money is depleated, a table of results are displayed showing
+    total amount of rolls, highest money held,how many rolls at highest held value
+-->
+<html>
+<head>
+    <!-- enables bootstrap-->
+    <script type="text/JavaScript" src="luckySevens.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet" type="text/css" />
+
+        <!-- simple styling for small interface-->
+        <style>
+          div{
+            max-width: 400px;
+            text-align: center;
+
+          }
+          h1{
+            text-align: center;
+            background-color: Green;
+          }
+
+          form{
+            padding-bottom: 50px;
+          }
+
+          thead{
+            border-top: 4px dashed red;
+          }
+
+        </style>
+</head>
+<body>
+
+  <!-- bootstrap for a responsive layout  -->
+<div class="container">
+      <h1>Lucky 7's</h1>
+  <!--bootstrap to utilize form components -->
+    <form name="lucky" onsubmit="return validateItems();"
+          onreset="resetForm();" class="form-inline">
+            <div class="form-group">
+                <label for="funds">Starting Bet:</label>
+                <input type="number" class="form-control" id="funds">
+            </div>
+        <button type="submit" id="submitButton" class="btn btn-default">Play!</button>
+
+    </form>
+
+    <!--display content-->
+    <table id="results" class="table table-striped" style="display:none;">
+        <thead>
+            <tr>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Starting Bet:</td>
+                <td><span id="money"></span></td>
+            </tr>
+            <tr>
+                <td>Total Rolls Before Going Broke </td>
+                <td><span id="totRolls"></span></td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td><span id="winnings"></span></td>
+            </tr>
+            <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td><span id="rollWin"></span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
